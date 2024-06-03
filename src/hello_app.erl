@@ -17,11 +17,11 @@ start(_Type, _Args) ->
         ]),
         cowboy:start_clear(
             my_http_listener,
-            [{port, 8080}],
+            [{port, 80}],
             #{env => #{dispatch => Dispatch}}
         ),
         hello_sup:start_link().
-    
+
 stop(_State) ->
     ok.                                                                                     
 
